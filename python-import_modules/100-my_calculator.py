@@ -3,7 +3,7 @@ import sys
 from calculator_1 import add, sub, mul, div
 
 
-def calc_result(a, operator, b):
+def calculate_result(a, operator, b):
     if operator == '+':
         result = add(a, b)
     elif operator == '-':
@@ -28,4 +28,4 @@ if __name__ == "__main__":
     operator = sys.argv[2]
     b = int(sys.argv[3])
 
-    calc_result(a, operator, b)
+    calculate_result(a, operator, b)
