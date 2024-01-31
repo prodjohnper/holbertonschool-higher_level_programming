@@ -4,8 +4,7 @@
 
 
 class Square:
-    ''' Class Square definition.
-'''
+    ''' Class Square definition. '''
 
     def __init__(self, size=0):
         if type(size) != int:
