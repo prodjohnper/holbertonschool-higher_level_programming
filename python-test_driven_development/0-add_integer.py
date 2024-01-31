@@ -20,8 +20,6 @@ def add_integer(a, b=89):
         raise TypeError('a must be an integer')
     if not isinstance(b, int):
         raise TypeError('b must be an integer')
-
     a = int(a)
     b = int(b)
-
     return a + b
