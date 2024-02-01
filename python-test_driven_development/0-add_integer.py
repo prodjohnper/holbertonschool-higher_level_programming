@@ -2,12 +2,12 @@
 ''' Function that adds two integers. '''
 
 
-def add_integer(a, b=89):
+def add_integer(a, b=98):
     ''' Adds two integers
 
     Args:
             a (int or float): The first number.
-            b (int or float): The second number. Defaults to 89.
+            b (int or float): The second number. Defaults to 98.
 
     Returns:
             int: The sum of a and b.
