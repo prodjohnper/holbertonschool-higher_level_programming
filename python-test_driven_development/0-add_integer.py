@@ -1,17 +1,8 @@
 #!/usr/bin/python3
 ''' 
-	Function that adds two integers.
-
-	The module includes the `add_integer` function, which can add two integers.
-	If only one integer is provided, the function defaults the other to 89.
-	It performs type checking to ensure both inputs are valid integers or floats.
-	Usage examples:
-
-    >>> add_integer(2, 3)
-    5
-
-    >>> add_integer(100, -2)
-    98 
+	Add integer function.
+    
+    This module provides a function for adding integers
 '''
 
 
