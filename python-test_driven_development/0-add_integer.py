@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-''' 
-    Module Name: 0-add_integer
-    Description: Function that adds two integers.
+''' Function to add two integers.
+
+    They're then casted and returned.
 
 '''
 
 
 def add_integer(a, b=98):
-    ''' Description: Adds two integers.
-        Returns: The sum of int a and int b.
+    ''' Adds two integers.
+        Returns: The sum of a and b.
     '''
     error_msg = "unsupported operand type(s) for +: 'NoneType' and 'int'"
     if a is None or b is None:
