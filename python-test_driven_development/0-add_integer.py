@@ -8,7 +8,9 @@
 
 def add_integer(a, b=98):
     ''' Adds two integers.
+
         Returns: The sum of a and b.
+
     '''
 
     if not isinstance(a, (int, float)):
