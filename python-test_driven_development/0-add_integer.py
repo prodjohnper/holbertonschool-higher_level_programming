@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-''' 
-	Function that adds two integers.
+''' Function that adds two integers.
     a and b must be integers or floats, otherwise raise a TypeError exception.
     If a or b are floats, the have to be casted before returning them.
 '''
