@@ -1,5 +1,6 @@
 # Doctests for 0-add_integer function
 =====================================
+
 Tests the add_integer function for any edge cases in the
 imported function.
 
@@ -12,12 +13,20 @@ imported function.
 98
 >>> add_integer(0, 0)
 0
->>> add_integer(4, "School")
-Traceback (most recent call last):
-    ...
-TypeError: b must be an integer
-
->>> add_integer("School", 4)
-Traceback (most recent call last):
-    ...
-TypeError: a must be an integer
+>>> try:
+...     add_integer(4, "School")
+... except TypeError as e:
+...     print(e)
+b must be an integer
+>>> try:
+...     add_integer("School", 4)
+... except TypeError as e:
+...     print(e)
+a must be an integer
+>>> try:
+...     add_integer(None)
+... except TypeError as e:
+...     print(e)
+unsupported operand type(s) for +: 'NoneType' and 'int'
+>>> add_integer(2)
+100
