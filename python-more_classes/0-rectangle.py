@@ -7,6 +7,6 @@
 
 
 class Rectangle:
-    """ Empty class """
+    """ Empty Rectangle class """
 
     pass
