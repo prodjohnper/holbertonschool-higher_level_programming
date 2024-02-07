@@ -7,7 +7,7 @@
 
 
 class Rectangle:
-    """ 
+    """
         Returns a new Rectangle instance with width == height == size
     """
 
