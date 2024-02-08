@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
     1-my_list.py
-    
+
     Description: Create a class MyList that inherits from list.
 '''
 
