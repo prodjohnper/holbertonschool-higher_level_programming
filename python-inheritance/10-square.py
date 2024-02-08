@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-    9-rectangle.py
+    10-square.py
 
     Description: Write a class Square(based on 9-rectangle.py)
 '''
