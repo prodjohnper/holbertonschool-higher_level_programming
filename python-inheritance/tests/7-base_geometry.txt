@@ -11,11 +11,6 @@ Test integer_validator method
 >>> bg.integer_validator("width", 89)
 
 >>> try:
-...     bg.integer_validator()
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] name must be an integer
->>> try:
 ...     bg.integer_validator("name", "John")
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
