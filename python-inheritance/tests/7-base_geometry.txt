@@ -1,7 +1,7 @@
 # Doctest for 7-base_geometry
 =============================
 
-Imports "BaseGeometry" class from "7-base_geometry"
+Imports "BaseGeometry" class from "base_geometry" module.
 Test integer_validator method
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
