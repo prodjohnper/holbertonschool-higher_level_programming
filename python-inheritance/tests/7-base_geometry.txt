@@ -35,6 +35,36 @@ Test integer_validator method
 [ValueError] distance must be greater than 0
 
 >>> try:
+...     bg.integer_validator("age", (4,))
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", [3])
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", True)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", {3, 4})
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", None)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
 ...     bg.area()
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
