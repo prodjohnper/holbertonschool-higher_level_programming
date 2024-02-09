@@ -26,7 +26,7 @@ def load_from_json_file(filename):
 
 try:
     obj = load_from_json_file("add_item.json")
-except:
+except FileNotFoundError:
     obj = []
 
 for _ in sys.argv[1:]:
