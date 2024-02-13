@@ -7,6 +7,9 @@
 
 
 class Base:
+    '''
+        Manage id attribute in all your future classes
+    '''
     __nb_objects = 0
 
     def __init__(self, id=None):
