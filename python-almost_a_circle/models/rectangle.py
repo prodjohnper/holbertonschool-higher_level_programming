@@ -124,10 +124,14 @@ class Rectangle(Base):
 
         return '[Rectangle] ({}) {}/{} - {}/{}'.format(id, x, y, w, h)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''
-            Assigns args to each attr in specified order
+            Assigns args to attrs, acception both positional and keyword args
         '''
-        attrs = ['id', 'width', 'height', 'x', 'y']
-        for index, arg in enumerate(args):
-            setattr(self, attrs[index], arg)
+        if args:
+            attrs = ['id', 'width', 'height', 'x', 'y']
+            for index, arg in enumerate(args):
+                setattr(self, attrs[index], arg)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
