@@ -123,3 +123,11 @@ class Rectangle(Base):
         y = self.y
 
         return '[Rectangle] ({}) {}/{} - {}/{}'.format(id, x, y, w, h)
+
+    def update(self, *args):
+        '''
+            Assigns args to each attr in specified order
+        '''
+        attrs = ['id', 'width', 'height', 'x', 'y']
+        for index, arg in enumerate(args):
+            setattr(self, attrs[index], arg)
