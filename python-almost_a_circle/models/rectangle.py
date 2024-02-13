@@ -104,8 +104,13 @@ class Rectangle(Base):
         '''
             Print rectangle instance with '#'
         '''
+        # Move to the starting y coordinate
+        for _ in range(self.y):
+            print()
+
+        # Print the rectangle lines with '#' and proper indentation
         for _ in range(self.height):
-            print('#' * self.width)
+            print(' ' * self.x + '#' * self.width)
 
     def __str__(self):
         '''
