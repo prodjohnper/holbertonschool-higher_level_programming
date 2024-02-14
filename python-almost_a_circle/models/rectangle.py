@@ -27,6 +27,9 @@ class Rectangle(Base):
         self.__y = y
 
     def validator(self, attr, value):
+        '''
+            Validator function
+        '''
         if type(value) is not int:
             raise TypeError(f'{attr} must be an integer')
         if attr == 'width' or attr == 'height':
