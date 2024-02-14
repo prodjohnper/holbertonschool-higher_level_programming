@@ -20,6 +20,9 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        '''
+            Square instance string representation
+        '''
         id = self.id
         x = self.x
         y = self.y
