@@ -17,10 +17,24 @@ class Rectangle(Base):
             Class constructor
         '''
         super().__init__(id)  # Call superclass const with id
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.validator('width', width)
+        self.validator('height', height)
+        self.validator('x', x)
+        self.validator('y', y)
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+
+    def validator(self, attr, value):
+        if type(value) is not int:
+            raise TypeError(f'{attr} must be an integer')
+        if attr == 'width' or attr == 'height':
+            if value <= 0:
+                raise ValueError(f'{attr} must be > 0')
+        else:
+            if value < 0:
+                raise ValueError(f'{attr} must be > 0')
 
     @property
     def width(self):
@@ -34,10 +48,7 @@ class Rectangle(Base):
         '''
             Width attribute setter
         '''
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        elif value <= 0:
-            raise ValueError("width must be > 0")
+        self.validator('width', value)
         self.__width = value
 
     @property
@@ -52,10 +63,7 @@ class Rectangle(Base):
         '''
             Height attribute setter
         '''
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        elif value <= 0:
-            raise ValueError("height must be > 0")
+        self.validator('height', value)
         self.__height = value
 
     @property
@@ -70,10 +78,7 @@ class Rectangle(Base):
         '''
             X attribute setter
         '''
-        if type(value) is not int:
-            raise TypeError("x must be an integer")
-        elif value < 0:
-            raise ValueError("x must be >= 0")
+        self.validator('x', value)
         self.__x = value
 
     @property
@@ -88,10 +93,7 @@ class Rectangle(Base):
         '''
             Y attribute setter
         '''
-        if type(value) is not int:
-            raise TypeError("y must be an integer")
-        elif value < 0:
-            raise ValueError("y must be >= 0")
+        self.validator('y', value)
         self.__y = value
 
     def area(self):
