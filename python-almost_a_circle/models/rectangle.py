@@ -32,12 +32,13 @@ class Rectangle(Base):
         '''
         if type(value) is not int:
             raise TypeError(f'{attr} must be an integer')
-        if attr == 'width' or attr == 'height':
-            if value <= 0:
-                raise ValueError(f'{attr} must be > 0')
         else:
-            if value < 0:
-                raise ValueError(f'{attr} must be > 0')
+            if attr == 'width' or attr == 'height':
+                if value <= 0:
+                    raise ValueError(f'{attr} must be > 0')
+            else:
+                if value < 0:
+                    raise ValueError(f'{attr} must be >= 0')
 
     @property
     def width(self):
