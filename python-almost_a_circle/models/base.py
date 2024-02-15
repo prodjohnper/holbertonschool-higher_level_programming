@@ -70,3 +70,18 @@ class Base:
 
         dummy_instance.update(**dictionary)  # Update attr using dict
         return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        '''
+            Return a list of instances loaded from a file
+        '''
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, 'r') as f:
+                json_data = f.read()
+                dictionary_list = cls.from_json_string(json_data)
+                instances = [cls.create(**data) for data in dictionary_list]
+                return instances
+        except FileNotFoundError:
+            return []
