@@ -154,6 +154,9 @@ class TestRectangle(unittest.TestCase):
         Square.save_to_file(None)
         with open("Square.json", "r") as file:
             self.assertEqual(file.read(), "[]")
+        Square.save_to_file([])
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
 
     def test_save_to_file(self):
         '''
