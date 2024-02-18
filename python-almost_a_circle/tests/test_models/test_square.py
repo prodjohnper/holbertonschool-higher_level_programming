@@ -147,6 +147,14 @@ class TestRectangle(unittest.TestCase):
         s1_dictionary = s1.to_dictionary()
         self.assertEqual(s1_dictionary, dictionary)
 
+    def test_save_to_file_none(self):
+        '''
+            Test for Square save_to_file with None
+        '''
+        Square.save_to_file(None)
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
     def test_save_to_file(self):
         '''
             Test for Square save_to_file
