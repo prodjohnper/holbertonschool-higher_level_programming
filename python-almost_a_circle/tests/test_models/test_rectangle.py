@@ -106,6 +106,27 @@ class TestRectangle(unittest.TestCase):
         r12 = Rectangle(8, 7, 0, 0, 12)
         self.assertEqual(r12.area(), 56)
 
+    def test_display_without_x_y(self):
+        '''
+            Test case for display() without x and y
+        '''
+        r = Rectangle(2, 3)
+        self.assertEqual(r.display(), None)
+
+    def test_display_without_y(self):
+        '''
+            Test case for display() without y
+        '''
+        r = Rectangle(2, 3, 1)
+        self.assertEqual(r.display(), None)
+
+    def test_display(self):
+        '''
+            Test case for display()
+        '''
+        r = Rectangle(2, 3, 1, 2)
+        self.assertEqual(r.display(), None)
+
     def test_str_representation(self):
         '''
             Test for Rectangle string representation

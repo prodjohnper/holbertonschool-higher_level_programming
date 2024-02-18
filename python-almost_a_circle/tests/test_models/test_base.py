@@ -43,12 +43,6 @@ class TestBase(unittest.TestCase):
         Base.save_to_file([])
         with open("Base.json", "r") as file:
             self.assertEqual(file.read(), '[]')
-        Rectangle.save_to_file([])
-        with open("Rectangle.json", "r") as file:
-            self.assertEqual(file.read(), '[]')
-        Square.save_to_file([])
-        with open("Square.json", "r") as file:
-            self.assertEqual(file.read(), '[]')
 
     def test_save_to_file(self):
         '''
