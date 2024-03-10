@@ -1,1 +1,1 @@
-# \_Holberton - SQL - More Queries
+# _Holberton - SQL - More Queries_
