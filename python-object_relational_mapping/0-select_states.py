@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
     0-select_states.py
-    
+
     Description: Lists all states from the database hbtn_0e_0_usa
 '''
 import MySQLdb
