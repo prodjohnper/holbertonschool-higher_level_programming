@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
     model_state.py
-    
+
     Description: Class State that inherits from Base
 '''
 from sqlalchemy.ext.declarative import declarative_base
