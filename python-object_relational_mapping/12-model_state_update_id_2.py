@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 '''
     12-model_state_update_id_2.py
-
     Description: Changes the name of a State
     object from the database hbtn_0e_6_usa
 '''
