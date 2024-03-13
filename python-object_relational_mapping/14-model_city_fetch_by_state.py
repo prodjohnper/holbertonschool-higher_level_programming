@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 '''
-    '''
+    14-model_city_fetch_by_state.py
+
+    Description: Prints all City objects from the database hbtn_0e_14_usa
+'''
 from model_state import Base, State
 from model_city import City
 from sqlalchemy import create_engine
