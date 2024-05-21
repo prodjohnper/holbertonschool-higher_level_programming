@@ -8,6 +8,6 @@
 // Updates the text color when the user clicks on the tag with id `red_header`
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('red_header').addEventListener('click', function () {
-      document.querySelector('header').style.color = '#FF0000';
+    document.querySelector('header').style.color = '#FF0000';
   });
 });

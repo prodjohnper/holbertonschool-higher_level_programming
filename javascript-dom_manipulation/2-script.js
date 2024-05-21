@@ -8,6 +8,6 @@
 // Adds the class red when the tag with id `red_header` is clicked
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('red_header').addEventListener('click', function () {
-      document.querySelector('header').classList.add('red');
+    document.querySelector('header').classList.add('red');
   });
 });
